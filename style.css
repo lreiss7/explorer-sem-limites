@@ -1,0 +1,306 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+:root {
+  font-size: 62.5%;
+  --base-font: "Mulish", sans-serif;
+
+  /*font-sizes*/
+  --font-size-base: 1.6rem;
+  --font-size-tittle1: 3.2rem;
+  --font-size-tittle2: 2.9rem;
+  --font-size-tittle3: 4.2rem;
+
+  /*colors*/
+  --background-body: hsl(283, 47%, 97%);
+  --tittle-color: hsl(320, 69%, 42%);
+  --cards-color-base: hsl(244, 38%, 28%);
+  --white-base: hsl(0, 0%, 100%);
+  --gradient-background: linear-gradient(96.21deg, #343193 0%, #302c63 99.68%);
+}
+
+body {
+  background: var(--background-body);
+  font-family: var(--base-font);
+}
+
+img {
+  width: 100%;
+}
+
+/* Typography */
+h1 {
+  font-size: var(--font-size-tittle1);
+  line-height: 4rem;
+  font-weight: 900;
+
+  margin: 1.7rem 0 0.5rem 0;
+
+  color: var(--tittle-color);
+}
+
+h2 {
+  font-size: 3.2rem;
+  line-height: 4rem;
+  font-weight: 900;
+  color: var(--tittle-color);
+}
+
+h3 {
+  font-size: 2.9rem;
+  line-height: 3.6rem;
+  font-weight: 900;
+  color: var(--tittle-color);
+  margin-bottom: 2rem;
+}
+
+p {
+  font-size: var(--font-size-base);
+  line-height: 2rem;
+  font-weight: 600;
+  color: var(--cards-color-base);
+}
+
+button,
+input,
+fieldset,
+textarea {
+  border: none;
+  background: none;
+  font-family: var(--font-size-base);
+}
+
+/* Main Section */
+#main {
+  width: 100%;
+  padding: 0 3.4rem 9.3rem 3.2rem;
+  text-align: center;
+}
+
+#main .content p {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.5rem;
+
+  margin-bottom: 3.8rem;
+
+  color: var(--cards-color-base);
+}
+
+#main .content .button-down {
+  width: 5.8rem;
+  height: 10.5rem;
+  display: flex;
+  margin: 0 auto;
+
+  border: 4px solid var(--accent-color);
+  border-radius: 76rem;
+  transition: filter 300ms;
+}
+
+#main .content .button-down:hover {
+  transform: scale(1.1);
+  opacity: 0.7;
+}
+
+/* Cards Section */
+#cards {
+  width: 100%;
+  height: 100%;
+  padding: 5.3rem 3.9rem 5.5rem;
+
+  display: grid;
+  gap: 5rem;
+
+  background: var(--cards-color-base);
+}
+
+#cards .card {
+  background: var(--background-body);
+  padding: 2.6rem;
+  border-radius: 2rem;
+}
+
+#cards .card img {
+  width: 8rem;
+  margin-bottom: 3.3rem;
+}
+
+#cards .card .card-text {
+  width: 100%;
+  padding-right: 2.7rem;
+}
+
+/* Contact Section */
+#contact {
+  width: 100%;
+  height: 100%;
+
+  padding: 7.8rem 3.9rem 6.5rem;
+}
+
+#contact form h2 {
+  margin-bottom: 4.3rem;
+}
+
+#contact form .input-wrapper {
+  margin-bottom: 2.4rem;
+}
+
+#contact form input,
+#contact form textarea {
+  width: 100%;
+  font-size: var(--font-size-base);
+  font-weight: 600;
+
+  padding: 1.2rem 1.6rem 1.2rem 1.4rem;
+  color: var(--cards-color-base);
+
+  border: 0.15rem solid var(--cards-color-base);
+  border-radius: 1.6rem;
+}
+
+#contact form input {
+  padding-left: 4rem;
+}
+#contact form textarea {
+  height: 12.6rem;
+}
+
+#contact form input::placeholder,
+#contact form textarea::placeholder {
+  font-weight: 600;
+  font-size: var(--font-size-base);
+
+  color: var(--cards-color-base);
+}
+
+#contact form button {
+  height: 4.5rem;
+  font-size: 1.4rem;
+  font-weight: 700;
+  line-height: 2.4rem;
+
+  padding: 1rem 1.6rem;
+  justify-content: center;
+  border-radius: 1.6rem;
+  background: var(--gradient-background);
+  color: var(--white-base);
+
+  cursor: pointer;
+  transition: filter 200ms;
+}
+
+#contact form button:hover {
+  filter: brightness(0.8);
+}
+
+#name {
+  background: url(./images/person.svg) no-repeat scroll 1.2rem;
+}
+
+#email {
+  background: url(./images/at.svg) no-repeat scroll 1.2rem;
+}
+
+/* Footer */
+footer {
+  background: var(--gradient-background);
+
+  padding: 3.2rem 1.6rem;
+}
+
+footer p {
+  font-size: 1.9rem;
+  line-height: 2.4rem;
+  font-weight: 600;
+  text-align: center;
+
+  color: var(--white-base);
+}
+
+@media (max-width: 1240px) {
+  #stars {
+    display: none;
+  }
+}
+
+@media (min-width: 1240px) {
+  /* Typography Desktop */
+  h1 {
+    font-size: clamp(3.2rem, 3vw + 1rem, 5.8rem);
+    line-height: 7.3rem;
+    margin: 0 0 0.8rem;
+  }
+
+  /* Main Section */
+  #main {
+    display: flex;
+    justify-content: space-between;
+
+    padding: 0 2.9rem 10.3rem 10.9rem;
+  }
+
+  #main .content {
+    order: 1;
+    margin-top: 31.2rem;
+  }
+
+  #main .astronaut {
+    order: 2;
+  } 
+
+  #main .content p {
+    font-size: 3.2rem;
+    line-height: 4rem;
+    margin-bottom: 17.9rem;
+  }
+
+  #main .content .button-down {
+    margin: 0;
+    justify-self: flex-end;
+  }
+
+  /* Cards Section */
+  #cards {
+    display: flex;
+    gap: 6rem;
+    padding: 6.4rem 11.1rem 8rem;
+  }
+
+  #cards .card {
+    padding: 3.2rem;
+  }
+
+  #cards .card .card-text {
+    padding-right: 0;
+  }
+
+  #cards .card .card-text p {
+    font-size: 1.9rem;
+  }
+
+  /* Contact Section */
+  #contact {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    position: relative;
+    gap: 9.2rem;
+  }
+
+  #contact form {
+    margin: 9.5rem 0 9.4rem 10.9rem;
+  }
+  
+  #stars {
+    width: fit-content;
+  }
+}
